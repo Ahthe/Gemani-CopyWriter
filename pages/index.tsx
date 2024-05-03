@@ -98,7 +98,7 @@ const Home: NextPage = () => {
               <h3 className="text-xl font-bold mb-2 text-purple-800">
                 Your marketing copy:
               </h3>
-              <div className="bg-purple-100 rounded-lg p-4">
+              <div className="bg-purple-100 rounded-lg p-4 max-h-64 overflow-y-auto">
                 <p className="text-gray-800">{suggestion}</p>
               </div>
             </div>
