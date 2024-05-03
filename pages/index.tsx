@@ -41,6 +41,10 @@ const Home: NextPage = () => {
     }
   };
 
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(suggestion);
+  };
+
   return (
     <div className="relative min-h-screen">
       <Head>
@@ -98,9 +102,16 @@ const Home: NextPage = () => {
               <h3 className="text-xl font-bold mb-2 text-purple-800">
                 Your marketing copy:
               </h3>
-              <div className="bg-purple-100 rounded-lg p-4 max-h-64 overflow-y-auto">
+              <div className="bg-purple-100 rounded-lg p-4 max-h-40 overflow-y-auto">
                 <p className="text-gray-800">{suggestion}</p>
               </div>
+              <button
+                type="button"
+                onClick={copyToClipboard}
+                className="mt-4 px-4 py-2 font-bold text-white bg-purple-500 rounded-lg hover:bg-purple-600 focus:outline-none focus:shadow-outline"
+              >
+                Copy Text
+              </button>
             </div>
           )}
         </div>
